@@ -29,11 +29,11 @@ void sift(I first, N n) {
 template <typename I, typename N>
 void mark_sieve(I first, I last, N factor) {
 
-	while (first + factor < last) {
-		
-		first += factor;
+	*first = false;
+
+	while (last - first > factor) {
+		first = first + factor;
+		*first = false;
 	}
-
-
 
 }
